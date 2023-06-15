@@ -1,85 +1,132 @@
 import { Form } from "react-router-dom";
+import "../css/contact.css";
 
 export default function Contact() {
-    const contact = {
-        first: "Your",
-        last: "Name",
-        avatar: "https://placekitten.com/g/200/200",
-        twitter: "your_handle",
-        notes: "Some notes",
-        favorite: true,
-    };
+    const nl = [
+        {
+            name: "OriginalFinn",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "your_handle",
+            notes: "Leitung",
+            favorite: true,
+        },
+        {
+            name: "Dios_De_Muerte",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "williams",
+            notes: "Leitung",
+            favorite: false,
+        },
+        {
+            name: "TwoReaperz",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "your_handle",
+            notes: "Leitung",
+            favorite: true,
+        },
+    ];
+
+    const gta = [
+        {
+            name: "Dios_De_Muerte",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "martin",
+            notes: "Projekt Leitung",
+            favorite: true,
+        },
+        {
+            name: "xImToR3X",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "martin",
+            notes: "Head of Development",
+            favorite: true,
+        },
+        {
+            name: "TwoReaperz",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "martin",
+            notes: "Development",
+            favorite: true,
+        },
+        {
+            name: "KoksAgent",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "martin",
+            notes: "Development",
+            favorite: true,
+        },
+    ];
+
+    const mc = [
+        {
+            name: "Kimi",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "martin",
+            notes: "Projekt Leitung",
+            favorite: true,
+        },
+        {
+            name: "Kiwi",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "martin",
+            notes: "Admin",
+            favorite: true,
+        },
+        {
+            name: "rapan207",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "martin",
+            notes: "Supporter",
+            favorite: true,
+        },
+        {
+            name: "Giu",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "martin",
+            notes: "Supporter",
+            favorite: true,
+        },
+    ];
 
     return (
         <div id="contact">
-            <div>
-                <img key={contact.avatar} src={contact.avatar || null} />
+            <h1>Netzwerk Team</h1>
+            <div id="nl">
+                {nl.map((contact) => (
+                    <div key={contact.name}>
+                        <img src={contact.avatar} />
+                        <div>
+                            {contact.name}
+                            {contact.notes}
+                        </div>
+                    </div>
+                ))}
             </div>
+            <h1>GTA Team</h1>
+            <div id="gta">
+                {gta.map((contact) => (
+                    <div key={contact.name}>
+                        <img src={contact.avatar} />
+                        <div>
+                            {contact.name}
+                            {contact.notes}
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <h1>MC Team</h1>
 
-            <div>
-                <h1>
-                    {contact.first || contact.last ? (
-                        <>
-                            {contact.first} {contact.last}
-                        </>
-                    ) : (
-                        <i>No Name</i>
-                    )}{" "}
-                    <Favorite contact={contact} />
-                </h1>
-
-                {contact.twitter && (
-                    <p>
-                        <a
-                            target="_blank"
-                            href={`https://twitter.com/${contact.twitter}`}
-                        >
-                            {contact.twitter}
-                        </a>
-                    </p>
-                )}
-
-                {contact.notes && <p>{contact.notes}</p>}
-
-                <div>
-                    <Form action="edit">
-                        <button type="submit">Edit</button>
-                    </Form>
-                    <Form
-                        method="post"
-                        action="destroy"
-                        onSubmit={(event) => {
-                            if (
-                                !confirm(
-                                    "Please confirm you want to delete this record."
-                                )
-                            ) {
-                                event.preventDefault();
-                            }
-                        }}
-                    >
-                        <button type="submit">Delete</button>
-                    </Form>
-                </div>
+            <div id="mc">
+                {mc.map((contact) => (
+                    <div key={contact.name}>
+                        <img src={contact.avatar} />
+                        <div>
+                            {contact.name}
+                            {contact.notes}
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
-    );
-}
-
-function Favorite({ contact }) {
-    // yes, this is a `let` for later
-    let favorite = contact.favorite;
-    return (
-        <Form method="post">
-            <button
-                name="favorite"
-                value={favorite ? "false" : "true"}
-                aria-label={
-                    favorite ? "Remove from favorites" : "Add to favorites"
-                }
-            >
-                {favorite ? "★" : "☆"}
-            </button>
-        </Form>
     );
 }
