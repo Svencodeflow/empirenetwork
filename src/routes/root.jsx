@@ -1,11 +1,45 @@
 import { Outlet, Link } from "react-router-dom";
 import "../css/root.css";
+import Typed from "typed.js";
+import React from "react";
+
+// Images
+import Logo from "../images/EN_logo.png";
 
 export default function Root() {
+    // Typed.js
+    const el = React.useRef(null);
+
+    React.useEffect(() => {
+        const typed = new Typed(el.current, {
+            strings: [
+                "<strong><i>Empire<i> Network!</strong>",
+                "<i>Enter</i> a new level",
+                "of gaming with",
+                "<strong>Our community!</strong>",
+            ],
+            typeSpeed: 100,
+            backSpeed: 50,
+        });
+
+        return () => {
+            // Destroy Typed instance during cleanup to stop animation
+            typed.destroy();
+        };
+    }, []);
+
     return (
         <>
             <div id="sidebar">
-                <h1>Empire Network</h1>
+                <Link to="/">
+                    <img src={Logo} alt="Logo" />
+                </Link>
+                {/* <h1>Enter a new level of gaming with our community!</h1> */}
+                <div className="App">
+                    <h1>
+                        <span ref={el} />
+                    </h1>
+                </div>
                 <div>
                     <nav>
                         <ul>
