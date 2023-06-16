@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import "./index.css";
 import ErrorPage from "./routes/error";
-import Contact from "./routes/contact";
+import Contact from "./routes/team";
 import Gta from "./routes/gta";
 import Server from "./routes/server";
 import Mineccraft from "./routes/minecraft";

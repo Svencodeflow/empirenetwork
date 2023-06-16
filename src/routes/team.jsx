@@ -1,5 +1,5 @@
 import { Form } from "react-router-dom";
-import "../css/contact.css";
+import "../css/team.css";
 
 export default function Contact() {
     const nl = [
@@ -35,6 +35,13 @@ export default function Contact() {
             favorite: true,
         },
         {
+            name: "Keelly",
+            avatar: "https://unsplash.it/200/200",
+            twitter: "martin",
+            notes: "Managment",
+            favorite: true,
+        },
+        {
             name: "xImToR3X",
             avatar: "https://unsplash.it/200/200",
             twitter: "martin",
@@ -66,13 +73,6 @@ export default function Contact() {
             favorite: true,
         },
         {
-            name: "Kiwi",
-            avatar: "https://unsplash.it/200/200",
-            twitter: "martin",
-            notes: "Admin",
-            favorite: true,
-        },
-        {
             name: "rapan207",
             avatar: "https://unsplash.it/200/200",
             twitter: "martin",
@@ -94,11 +94,15 @@ export default function Contact() {
             <div id="nl">
                 {nl.map((contact) => (
                     <div key={contact.name}>
-                        <img src={contact.avatar} />
-                        <div>
-                            {contact.name}
-                            {contact.notes}
+                        <div className="box" style={{ "--i": 0 }}>
+                            <i></i>
+                            <div className="content">
+                                <img src={contact.avatar} />
+                                <h2>{contact.name}</h2>
+                                {contact.notes}
+                            </div>
                         </div>
+                        <div></div>
                     </div>
                 ))}
             </div>
@@ -106,23 +110,28 @@ export default function Contact() {
             <div id="gta">
                 {gta.map((contact) => (
                     <div key={contact.name}>
-                        <img src={contact.avatar} />
-                        <div>
-                            {contact.name}
-                            {contact.notes}
+                        <div className="box" style={{ "--i": 1 }}>
+                            <i></i>
+                            <div className="content">
+                                <img src={contact.avatar} />
+                                <h2>{contact.name}</h2>
+                                {contact.notes}
+                            </div>
                         </div>
                     </div>
                 ))}
             </div>
             <h1>MC Team</h1>
-
             <div id="mc">
                 {mc.map((contact) => (
                     <div key={contact.name}>
-                        <img src={contact.avatar} />
-                        <div>
-                            {contact.name}
-                            {contact.notes}
+                        <div className="box" style={{ "--i": 0 }}>
+                            <i></i>
+                            <div className="content">
+                                <img src={contact.avatar} />
+                                <h2>{contact.name}</h2>
+                                {contact.notes}
+                            </div>
                         </div>
                     </div>
                 ))}
