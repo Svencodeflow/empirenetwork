@@ -44,10 +44,10 @@ export default function Root() {
                     <nav>
                         <ul>
                             <li>
-                                <Link to={`contacts/1`}>Das Team</Link>
+                                <Link to={`/dasteam`}>Das Team</Link>
                             </li>
                             <li>
-                                <Link to={`/contacts/2`}>Über uns</Link>
+                                <Link to={`/überuns`}>Über uns</Link>
                             </li>
                             <li>
                                 <Link to={`/server`}>Server</Link>

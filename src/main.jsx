@@ -8,6 +8,7 @@ import Contact from "./routes/team";
 import Gta from "./routes/gta";
 import Server from "./routes/server";
 import Mineccraft from "./routes/minecraft";
+import About from "./routes/about";
 
 const router = createBrowserRouter([
     {
@@ -16,8 +17,12 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             {
-                path: "/contacts/:contactId",
+                path: "/dasteam",
                 element: <Contact />,
+            },
+            {
+                path: "/überuns",
+                element: <About />,
             },
             {
                 path: "/server",
@@ -26,13 +31,23 @@ const router = createBrowserRouter([
         ],
     },
     {
-        path: "/contacts/:contactId",
+        path: "/dasteam",
         element: <Contact />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/server",
+        element: <Server />,
         errorElement: <ErrorPage />,
     },
     {
         path: "/minecraft",
         element: <Mineccraft />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/gta",
+        element: <Gta />,
         errorElement: <ErrorPage />,
     },
 ]);

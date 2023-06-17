@@ -5,21 +5,21 @@ export default function Contact() {
     const nl = [
         {
             name: "OriginalFinn",
-            avatar: "https://unsplash.it/200/200",
+            avatar: "https://cdn.discordapp.com/avatars/392045810399051780/b125b2cec01f25c1c361a06456871dc0.webp?size=128",
             twitter: "your_handle",
             notes: "Leitung",
             favorite: true,
         },
         {
             name: "Dios_De_Muerte",
-            avatar: "https://unsplash.it/200/200",
+            avatar: "https://cdn.discordapp.com/avatars/534022113649229843/b958a4fa7895f9783f782a9ca17ab1ad.webp?size=128",
             twitter: "williams",
             notes: "Leitung",
             favorite: false,
         },
         {
             name: "TwoReaperz",
-            avatar: "https://unsplash.it/200/200",
+            avatar: "https://pbs.twimg.com/profile_images/1349150089474957313/i-GSsdVr_400x400.jpg",
             twitter: "your_handle",
             notes: "Leitung",
             favorite: true,
@@ -29,7 +29,7 @@ export default function Contact() {
     const gta = [
         {
             name: "Dios_De_Muerte",
-            avatar: "https://unsplash.it/200/200",
+            avatar: "https://cdn.discordapp.com/avatars/534022113649229843/b958a4fa7895f9783f782a9ca17ab1ad.webp?size=128",
             twitter: "martin",
             notes: "Projekt Leitung",
             favorite: true,
@@ -43,21 +43,21 @@ export default function Contact() {
         },
         {
             name: "xImToR3X",
-            avatar: "https://unsplash.it/200/200",
+            avatar: "https://c4.wallpaperflare.com/wallpaper/851/501/292/minimalism-programming-code-wallpaper-preview.jpg",
             twitter: "martin",
             notes: "Head of Development",
             favorite: true,
         },
         {
             name: "TwoReaperz",
-            avatar: "https://unsplash.it/200/200",
+            avatar: "https://pbs.twimg.com/profile_images/1349150089474957313/i-GSsdVr_400x400.jpg",
             twitter: "martin",
             notes: "Development",
             favorite: true,
         },
         {
             name: "KoksAgent",
-            avatar: "https://unsplash.it/200/200",
+            avatar: "https://cdn.discordapp.com/avatars/165071662595702784/84641853fb7ed72e4be0e8b12ea1f3e7.webp?size=128",
             twitter: "martin",
             notes: "Development",
             favorite: true,
@@ -70,6 +70,13 @@ export default function Contact() {
             avatar: "https://unsplash.it/200/200",
             twitter: "martin",
             notes: "Projekt Leitung",
+            favorite: true,
+        },
+        {
+            name: "OriginalFinn",
+            avatar: "https://cdn.discordapp.com/avatars/392045810399051780/b125b2cec01f25c1c361a06456871dc0.webp?size=128",
+            twitter: "your_handle",
+            notes: "Development",
             favorite: true,
         },
         {
