@@ -44,13 +44,13 @@ export default function Root() {
                     <nav>
                         <ul>
                             <li>
-                                <Link to={`/dasteam`}>Das Team</Link>
+                                <Link to={`dasteam`}>Das Team</Link>
                             </li>
                             <li>
-                                <Link to={`/überuns`}>Über uns</Link>
+                                <Link to={`überuns`}>Über uns</Link>
                             </li>
                             <li>
-                                <Link to={`/server`}>Server</Link>
+                                <Link to={`server`}>Server</Link>
                             </li>
                         </ul>
                     </nav>
@@ -58,6 +58,16 @@ export default function Root() {
             </div>
             <div id="detail">
                 <Outlet />
+                <div className="gta">
+                    <h1>
+                        Rage<Link to={`gta`}>MP</Link>
+                    </h1>
+                </div>
+                <div className="minecraft">
+                    <h1>
+                        Mine<Link to={`minecraft`}>Craft</Link>
+                    </h1>
+                </div>
             </div>
         </>
     );

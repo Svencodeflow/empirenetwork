@@ -45,6 +45,17 @@ h1 {
     text-shadow: 2px 2px 4px #ffffff;
 }
 
+.gta {
+    font-size: 2em;
+    text-align: left;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+.gta h1 {
+    color: black;
+}
+
 .App {
     width: 25%;
 }

@@ -31,16 +31,6 @@ const router = createBrowserRouter([
         ],
     },
     {
-        path: "/dasteam",
-        element: <Contact />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/server",
-        element: <Server />,
-        errorElement: <ErrorPage />,
-    },
-    {
         path: "/minecraft",
         element: <Mineccraft />,
         errorElement: <ErrorPage />,
