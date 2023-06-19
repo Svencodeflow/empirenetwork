@@ -1,0 +1,35 @@
+#bg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/gtabackground.jpg");
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+
+#bg-top {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background_dings {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 58vh;
+    background-color: white;
+    margin: auto;
+    margin-top: 40%;
+    border-radius: 100% 0% 100% 0% / 43% 100% 0% 57%;
+}

@@ -18,7 +18,8 @@ h1 {
     margin: 10px;
 }
 
-#sidebar img {
+#sidebar a img {
+    margin: 0 auto;
     width: 280px;
     height: 180px;
     display: flex;
@@ -56,6 +57,20 @@ h1 {
     color: black;
 }
 
+.minecraft {
+    font-size: 2em;
+    text-align: right;
+    margin-right: 10%;
+    margin-top: -6%;
+}
+
+.minecraft h1 {
+    color: black;
+}
+
 .App {
-    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
 }

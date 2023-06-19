@@ -2,9 +2,11 @@ import { Outlet, Link } from "react-router-dom";
 import "../css/root.css";
 import Typed from "typed.js";
 import React from "react";
+import Serverwahl from "../routes/serverwahl";
 
 // Images
 import Logo from "../images/EN_logo.png";
+import Server from "./server";
 
 export default function Root() {
     // Typed.js
@@ -13,13 +15,16 @@ export default function Root() {
     React.useEffect(() => {
         const typed = new Typed(el.current, {
             strings: [
-                "<strong><i>Empire<i> Network!</strong>",
-                "<i>Enter</i> a new level",
-                "of gaming with",
-                "<strong>Our community!</strong>",
+                "<strong><i>EmpireNetwork<i></strong>",
+                "<strong><i>EmpireNetwork<i></strong>...",
+                "<strong><i>EmpireNetwork<i></strong>:",
+                "<strong><i>EmpireNetwork<i></strong>: <i>Enter</i> a new level",
+                "<strong><i>EmpireNetwork<i></strong>: of gaming with",
+                "<strong><i>EmpireNetwork<i></strong>: <strong>Our community!</strong>",
             ],
             typeSpeed: 100,
             backSpeed: 50,
+            loop: true,
         });
 
         return () => {
@@ -58,16 +63,6 @@ export default function Root() {
             </div>
             <div id="detail">
                 <Outlet />
-                <div className="gta">
-                    <h1>
-                        Rage<Link to={`gta`}>MP</Link>
-                    </h1>
-                </div>
-                <div className="minecraft">
-                    <h1>
-                        Mine<Link to={`minecraft`}>Craft</Link>
-                    </h1>
-                </div>
             </div>
         </>
     );

@@ -9,6 +9,7 @@ import Gta from "./routes/gta";
 import Server from "./routes/server";
 import Mineccraft from "./routes/minecraft";
 import About from "./routes/about";
+import Serverwahl from "./routes/serverwahl";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "/server",
                 element: <Server />,
+            },
+            {
+                path: "/serverwahl",
+                element: <Serverwahl />,
             },
         ],
     },

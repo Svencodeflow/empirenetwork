@@ -97,7 +97,9 @@ export default function Contact() {
 
     return (
         <div id="contact">
-            <h1>Netzwerk Team</h1>
+            <h1>
+                <span>Network</span> Team
+            </h1>
             <div id="nl">
                 {nl.map((contact) => (
                     <div key={contact.name}>
@@ -113,7 +115,9 @@ export default function Contact() {
                     </div>
                 ))}
             </div>
-            <h1>GTA Team</h1>
+            <h1>
+                <span2>GTA</span2> Team
+            </h1>
             <div id="gta">
                 {gta.map((contact) => (
                     <div key={contact.name}>
@@ -128,11 +132,13 @@ export default function Contact() {
                     </div>
                 ))}
             </div>
-            <h1>MC Team</h1>
+            <h1>
+                <span3>MC</span3> Team
+            </h1>
             <div id="mc">
                 {mc.map((contact) => (
                     <div key={contact.name}>
-                        <div className="box" style={{ "--i": 0 }}>
+                        <div className="box" style={{ "--i": 2 }}>
                             <i></i>
                             <div className="content">
                                 <img src={contact.avatar} />

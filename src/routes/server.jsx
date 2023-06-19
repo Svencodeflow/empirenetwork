@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../css/server.css";
 
 export default function Server() {
     const mcStatus =
@@ -6,9 +8,13 @@ export default function Server() {
 
     return (
         <div>
-            <h1>EmpireCity</h1>
-            <div className="server">
-                <img src={mcStatus} alt="Server Status" />
+            <div className="server_h">
+                <h1>
+                    <span>Empire</span>City
+                </h1>
+                <div className="server">
+                    <img src={mcStatus} alt="Server Status" />
+                </div>
             </div>
         </div>
     );

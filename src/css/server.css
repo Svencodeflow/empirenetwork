@@ -1,0 +1,14 @@
+.server_h {
+    margin-top: 4%;
+}
+
+.server img {
+    width: 500px;
+    height: 150px;
+    margin-top: 2%;
+}
+
+.server_h h1 span {
+    color: #ff7f50;
+    font-weight: bold;
+}
