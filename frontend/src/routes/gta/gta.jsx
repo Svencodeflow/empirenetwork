@@ -1,5 +1,6 @@
 import React from "react";
-import "../css/gta.css";
+import "../../css/gta.css";
+import { Link } from "react-router-dom";
 
 export default function gta() {
     return (
@@ -11,6 +12,7 @@ export default function gta() {
                         <ul>
                             <li>
                                 <a href="/">Home</a>
+                                <Link to="/gtalogin">Login</Link>
                             </li>
                         </ul>
                     </nav>

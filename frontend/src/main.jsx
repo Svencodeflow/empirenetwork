@@ -5,7 +5,8 @@ import Root from "./routes/root";
 import "./index.css";
 import ErrorPage from "./routes/error";
 import Contact from "./routes/team";
-import Gta from "./routes/gta";
+import Gta from "./routes/gta/gta";
+import Gtalogin from "./routes/gta/gtalogin";
 import Server from "./routes/server";
 import Mineccraft from "./routes/minecraft";
 import About from "./routes/about";
@@ -41,9 +42,20 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
+        path: "/gtalogin",
+        element: <Gtalogin />,
+        errorElement: <ErrorPage />,
+    },
+    {
         path: "/gta",
         element: <Gta />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "/gtalogin",
+                element: <Gtalogin />,
+            },
+        ],
     },
 ]);
 
