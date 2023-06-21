@@ -1,7 +1,7 @@
-import { Form } from "react-router-dom";
+import React from "react";
 import "../css/team.css";
 
-export default function Contact() {
+export default function Team() {
     const nl = [
         {
             name: "OriginalFinn",
@@ -96,16 +96,16 @@ export default function Contact() {
     ];
 
     return (
-        <div id="contact">
+        <div id="contact_team">
             <h1>
                 <span>Network</span> Team
             </h1>
-            <div id="nl">
+            <div id="nl_team">
                 {nl.map((contact) => (
                     <div key={contact.name}>
-                        <div className="box" style={{ "--i": 0 }}>
+                        <div className="box_team" style={{ "--i": 0 }}>
                             <i></i>
-                            <div className="content">
+                            <div className="content_team">
                                 <img src={contact.avatar} />
                                 <h2>{contact.name}</h2>
                                 {contact.notes}
@@ -118,12 +118,12 @@ export default function Contact() {
             <h1>
                 <span2>GTA</span2> Team
             </h1>
-            <div id="gta">
+            <div id="gta_team">
                 {gta.map((contact) => (
                     <div key={contact.name}>
-                        <div className="box" style={{ "--i": 1 }}>
+                        <div className="box_team">
                             <i></i>
-                            <div className="content">
+                            <div className="content_team" style={{ "--i": 1 }}>
                                 <img src={contact.avatar} />
                                 <h2>{contact.name}</h2>
                                 {contact.notes}
@@ -135,12 +135,12 @@ export default function Contact() {
             <h1>
                 <span3>MC</span3> Team
             </h1>
-            <div id="mc">
+            <div id="mc_team">
                 {mc.map((contact) => (
                     <div key={contact.name}>
-                        <div className="box" style={{ "--i": 2 }}>
+                        <div className="box_team">
                             <i></i>
-                            <div className="content">
+                            <div className="content_team" style={{ "--i": 2 }}>
                                 <img src={contact.avatar} />
                                 <h2>{contact.name}</h2>
                                 {contact.notes}
