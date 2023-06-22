@@ -4,34 +4,6 @@ import axios from "axios";
 import mysql from "mysql";
 
 export default function gtalogin() {
-    // const [userData, setUserData] = useState([]);
-    const [dbData, setDbData] = useState([]);
-
-    useEffect(() => {
-        axios.get("http://localhost:3000/api/config/db").then((response) => {
-            setDbData(response.data);
-        });
-    }, []);
-
-    console.log(dbData);
-
-    useEffect(() => {
-        const connection = mysql.createConnection({
-            host: dbData.host,
-            user: dbData.user,
-            password: dbData.password,
-            database: dbData.database,
-        });
-
-        connection.connect((err) => {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log("Connected to the MySQL server.");
-            }
-        });
-    }, [dbData]);
-
     return (
         <div className="gta_login">
             <div className="box">
