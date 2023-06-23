@@ -22,24 +22,6 @@ app.use(express.json());
 // };
 // app.use(cors(corsOptions));
 
-app.get("/api/config/db", (req, res) => {
-    const dbHost = process.env.DB_HOST;
-    const dbUser = process.env.DB_USER;
-    const dbPassword = process.env.DB_PASSWORD;
-    const dbDatabase = process.env.DB_DATABASE;
-    const dbPort = process.env.DB_PORT;
-
-    // res.send(`mysql://${dbUser}:${dbPassword}@${dbHost}/${dbDatabase}`);
-
-    res.send({
-        dbHost,
-        dbUser,
-        dbPassword,
-        dbDatabase,
-        dbPort,
-    });
-});
-
 // MYSQL Connection
 
 const connection = mysql.createConnection({
@@ -77,8 +59,6 @@ app.get("/api/users", (req, res) => {
 
             console.log(users);
             res.send(users);
-
-            connection.end();
         }
     );
 });
@@ -112,8 +92,6 @@ app.post("/api/users", async (req, res) => {
             }
 
             res.send(rows);
-
-            connection.end();
         }
     );
 });
@@ -216,8 +194,6 @@ app.get("/api/users", (req, res) => {
 
                 console.log(users);
                 res.send(users);
-
-                connection.end();
             }
         );
     });
